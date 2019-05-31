@@ -21,4 +21,16 @@ public class PlaneTest {
     public void getTotalWeight(){
         assertEquals(2500, plane.getTotalWeightFromEnum());
     }
+
+    @Test
+    public void canGetSeatNumbersAsArray(){
+        plane.getSeatNumbers();
+        assertEquals(true, plane.checkSeatArray());
+    }
+
+    @Test
+    public void canGetSeatArraySize(){
+        plane.getSeatNumbers();
+        assertEquals(175, plane.getArrayOfSeatsSize());
+    }
 }
